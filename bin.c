@@ -15,11 +15,15 @@ int power(int base, int exp) {
         base *= base;
     }
     //neg. exp. micht berücksichtigen
+    if(exp < 0) {
+        return -1;
+    }
+    for(int i = 1; i < exp; i++) {
+        base *= base;
+    }
 
     return base;
 }
-
-
 
 
 //main
